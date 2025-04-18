@@ -40,4 +40,11 @@ ehthumbs.db
 Thumbs.db
 
 # Netlify
-.netlify 
+.netlify
+.netlify/functions-internal/
+.netlify/functions/
+.netlify/cache/
+
+# Optional: Cache
+.cache/
+.temp/ 
