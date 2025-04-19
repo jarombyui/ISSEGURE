@@ -1,26 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
+    user_name: '',
+    user_email: '',
+    user_phone: '',
     subject: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ show: false, error: false, message: '' });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
-    alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    setLoading(true);
+    setStatus({ show: false, error: false, message: '' });
+
+    // Configuración de EmailJS
+    const serviceId = 'service_2s4mq1i';
+    const templateId = 'template_wmaxp7o';
+    const publicKey = 'AzFBOg4U8pNyIYUgb';
+
+    const templateParams = {
+      from_name: formData.user_name,
+      from_email: formData.user_email,
+      from_phone: formData.user_phone,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: 'issegureinstitute@gmail.com'
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setStatus({
+          show: true,
+          error: false,
+          message: '¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.'
+        });
+        setFormData({
+          user_name: '',
+          user_email: '',
+          user_phone: '',
+          subject: '',
+          message: ''
+        });
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        setStatus({
+          show: true,
+          error: true,
+          message: 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.'
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   const handleChange = (e) => {
@@ -57,7 +95,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <p className="text-gray-600">Dirección: Calle Principal #123, Ciudad</p>
+                  <p className="text-gray-600">Dirección: Urbanización Virgen del Carmen Calle Gardenias N°14, Ate</p>
                 </div>
               </div>
 
@@ -68,7 +106,8 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <p className="text-gray-600">Teléfono: (123) 456-7890</p>
+                  <p className="text-gray-600">Teléfono: +51 947726382</p>
+                  <p className="text-gray-600">WhatsApp: +51 950 700 541</p>
                 </div>
               </div>
 
@@ -79,8 +118,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <p className="text-gray-600">Email: issegureinstitute@gmail.com
-                  </p>
+                  <p className="text-gray-600">Email: issegureinstitute@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -94,16 +132,16 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="user_name" className="block text-sm font-medium text-gray-700">
                   Nombre Completo
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="user_name"
+                  name="user_name"
+                  value={formData.user_name}
                   onChange={handleChange}
                   required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
@@ -111,14 +149,14 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="user_email" className="block text-sm font-medium text-gray-700">
                   Correo Electrónico
                 </label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  id="user_email"
+                  name="user_email"
+                  value={formData.user_email}
                   onChange={handleChange}
                   required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
@@ -126,14 +164,14 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="user_phone" className="block text-sm font-medium text-gray-700">
                   Teléfono
                 </label>
                 <input
                   type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
+                  id="user_phone"
+                  name="user_phone"
+                  value={formData.user_phone}
                   onChange={handleChange}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
                 />
@@ -169,12 +207,25 @@ const Contact = () => {
                 />
               </div>
 
+              {status.show && (
+                <div 
+                  className={`p-4 rounded-md ${
+                    status.error ? 'bg-red-50 text-red-800' : 'bg-green-50 text-green-800'
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
+
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition-colors duration-300"
+                  disabled={loading}
+                  className={`w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition-colors duration-300 ${
+                    loading ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
                 >
-                  Enviar Mensaje
+                  {loading ? 'Enviando...' : 'Enviar Mensaje'}
                 </button>
               </div>
             </form>
