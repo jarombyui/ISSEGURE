@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">ISSEGUR</h3>
+            <h3 className="text-2xl font-bold mb-4">ISSEGURE</h3>
             <p className="text-gray-400 mb-4">
               Instituto Superior de Seguridad, brindando educación especializada en seguridad integral por más de 20 años.
             </p>
@@ -69,7 +69,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ISSEGUR. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} ISSEGURE. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

@@ -11,7 +11,7 @@ const Hero = () => {
           SOMOS LA INSTITUCIÓN TÉCNICO EDUCATIVA ESPECIALIZADA EN SEGURIDAD INTEGRAL
         </p>
         <p className="text-lg md:text-xl mb-8">
-          CERTIFÍCATE CON LOS EXPERTOS DE ISSEGUR / MÁS DE 20 AÑOS DE EXPERIENCIA
+          CERTIFÍCATE CON LOS EXPERTOS DE ISSEGURE / MÁS DE 20 AÑOS DE EXPERIENCIA
         </p>
         <div className="flex flex-col md:flex-row gap-4">
           <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-colors">

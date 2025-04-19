@@ -7,7 +7,7 @@ const Blog = () => {
       title: 'Tendencias en Seguridad 2024',
       excerpt: 'Descubre las últimas tendencias y tecnologías en el mundo de la seguridad.',
       date: '15 de Marzo, 2024',
-      author: 'Equipo ISSEGUR',
+      author: 'Equipo ISSEGURE',
       category: 'Seguridad',
       image: '/images/blog-trends.jpg',
       readTime: '5 min',
@@ -42,7 +42,7 @@ const Blog = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Blog ISSEGUR
+            Blog ISSEGURE
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
             Mantente informado sobre las últimas novedades en seguridad

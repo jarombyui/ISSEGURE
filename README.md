@@ -1,6 +1,6 @@
-# ISSEGUR - Instituto Superior de Seguridad
+# ISSEGURE - Instituto Superior de Seguridad
 
-Sitio web oficial de ISSEGUR, especialistas en educación y certificación en seguridad integral.
+Sitio web oficial de ISSEGURE, especialistas en educación y certificación en seguridad integral.
 
 ## Características
 
@@ -58,4 +58,4 @@ src/
 
 ## Licencia
 
-Este proyecto está bajo la Licencia ISSEGUR. Ver el archivo `LICENSE` para más detalles. 
+Este proyecto está bajo la Licencia ISSEGURE. Ver el archivo `LICENSE` para más detalles. 
