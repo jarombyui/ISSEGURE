@@ -21,8 +21,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-primary">
-              ISSEGURE
+            <Link to="/" className="flex items-center">
+              <img
+                src="/images/logo.svg"
+                alt="ISSEGURE Logo"
+                className="h-12 w-auto bg-primary p-2 rounded-lg"
+              />
             </Link>
           </div>
 
@@ -32,7 +36,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium"
+                className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -44,6 +48,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-primary"
+              aria-label="Toggle menu"
             >
               <svg
                 className="h-6 w-6"
@@ -79,7 +84,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium"
+                  className="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

@@ -1,9 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className="hero-section h-[600px]">
-      <div className="flex flex-col items-center justify-center h-full text-white text-center px-4">
+    <div className="hero-section h-[600px] relative">
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="relative flex flex-col items-center justify-center h-full text-white text-center px-4">
+        <div className="mb-8">
+          <img
+            src="/images/logo.svg"
+            alt="ISSEGURE Logo"
+            className="h-32 w-auto bg-primary p-4 rounded-xl shadow-lg mb-6 transform hover:scale-105 transition-all duration-300"
+          />
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           DALE MAYOR NIVEL A TU CERTIFICACIÓN
         </h1>
@@ -14,12 +23,18 @@ const Hero = () => {
           CERTIFÍCATE CON LOS EXPERTOS DE ISSEGURE / MÁS DE 20 AÑOS DE EXPERIENCIA
         </p>
         <div className="flex flex-col md:flex-row gap-4">
-          <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+          <Link 
+            to="/cursos"
+            className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+          >
             Ver Cursos
-          </button>
-          <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+          </Link>
+          <Link 
+            to="/servicios"
+            className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+          >
             Validar Certificado
-          </button>
+          </Link>
         </div>
       </div>
     </div>
