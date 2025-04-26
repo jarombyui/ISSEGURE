@@ -6,7 +6,6 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './pages/About';
 import Courses from './pages/Courses';
-import Diplomas from './pages/Diplomas';
 import ServicesPage from './pages/ServicesPage';
 import SuggestionBox from './pages/SuggestionBox';
 import Blog from './pages/Blog';
@@ -30,7 +29,6 @@ function App() {
             } />
             <Route path="/about" element={<About />} />
             <Route path="/cursos" element={<Courses />} />
-            <Route path="/diplomados" element={<Diplomas />} />
             <Route path="/servicios" element={<ServicesPage />} />
             <Route path="/sugerencias" element={<SuggestionBox />} />
             <Route path="/blog" element={<Blog />} />

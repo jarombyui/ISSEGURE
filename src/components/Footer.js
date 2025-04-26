@@ -14,7 +14,6 @@ const Footer = () => {
     { name: 'Inicio', path: '/' },
     { name: '¿Quiénes Somos?', path: '/about' },
     { name: 'Cursos', path: '/cursos' },
-    { name: 'Diplomados', path: '/diplomados' },
     { name: 'Servicios', path: '/servicios' },
     { name: 'Contáctanos', path: '/contacto' },
   ];
@@ -33,7 +32,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-4">
-              Instituto Superior de Seguridad, brindando educación especializada en seguridad integral por más de 20 años.
+              Centro para la Seguridad Industrial, brindando capacitaciones especializadas en seguridad integral por más de 20 años.
             </p>
           </div>
 

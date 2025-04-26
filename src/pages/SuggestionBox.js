@@ -86,7 +86,6 @@ const SuggestionBox = () => {
               >
                 <option value="general">General</option>
                 <option value="cursos">Cursos</option>
-                <option value="diplomados">Diplomados</option>
                 <option value="servicios">Servicios</option>
                 <option value="soporte">Soporte Técnico</option>
               </select>

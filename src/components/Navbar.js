@@ -8,7 +8,6 @@ const Navbar = () => {
     { name: 'INICIO', path: '/' },
     { name: '¿QUIÉNES SOMOS?', path: '/about' },
     { name: 'CURSOS', path: '/cursos' },
-    { name: 'DIPLOMADOS', path: '/diplomados' },
     { name: 'SERVICIOS', path: '/servicios' },
     { name: 'BUZÓN DE SUGERENCIAS', path: '/sugerencias' },
     { name: 'BLOG', path: '/blog' },

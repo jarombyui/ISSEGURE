@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
@@ -18,47 +17,19 @@ const Contact = () => {
     setLoading(true);
     setStatus({ show: false, error: false, message: '' });
 
-    // Configuración de EmailJS
-    const serviceId = 'service_2s4mq1i';
-    const templateId = 'template_wmaxp7o';
-    const publicKey = 'AzFBOg4U8pNyIYUgb';
-
-    const templateParams = {
-      from_name: formData.user_name,
-      from_email: formData.user_email,
-      from_phone: formData.user_phone,
-      subject: formData.subject,
-      message: formData.message,
-      to_email: 'issegureinstitute@gmail.com'
-    };
-
-    emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setStatus({
-          show: true,
-          error: false,
-          message: '¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.'
-        });
-        setFormData({
-          user_name: '',
-          user_email: '',
-          user_phone: '',
-          subject: '',
-          message: ''
-        });
-      })
-      .catch((err) => {
-        console.error('FAILED...', err);
-        setStatus({
-          show: true,
-          error: true,
-          message: 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.'
-        });
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    // WhatsApp
+    const phone = '51950700541'; // Número de WhatsApp de contacto
+    const message = `Hola, soy ${formData.user_name}.\nEmail: ${formData.user_email}\nTeléfono: ${formData.user_phone}\nAsunto: ${formData.subject}\nMensaje: ${formData.message}`;
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    setLoading(false);
+    setStatus({ show: true, error: false, message: 'Redirigiendo a WhatsApp...' });
+    setFormData({
+      user_name: '',
+      user_email: '',
+      user_phone: '',
+      subject: '',
+      message: ''
+    });
   };
 
   const handleChange = (e) => {
