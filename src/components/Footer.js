@@ -27,9 +27,9 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <img
-                src="/images/logo.svg"
-                alt="ISSEGURE Logo"
-                className="h-16 w-auto bg-primary p-2 rounded-lg"
+                src="/images/ISSEGUREX.png"
+                alt="ISSEGUREX Logo"
+                className="h-20 w-auto max-w-[200px] object-contain drop-shadow-lg rounded"
               />
             </div>
             <p className="text-gray-400 mb-4">
@@ -75,7 +75,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ISSEGURE. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} ISSEGUREX. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

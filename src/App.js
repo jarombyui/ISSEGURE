@@ -14,6 +14,8 @@ import Contact from './pages/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
+  const message = 'Hola, estoy interesado en los servicios de ISSEGUREX';
   return (
     <Router>
       <div className="flex flex-col min-h-screen">

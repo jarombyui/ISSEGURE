@@ -8,19 +8,19 @@ const Hero = () => {
       <div className="relative flex flex-col items-center justify-center h-full text-white text-center px-4">
         <div className="mb-8">
           <img
-            src="/images/logo.svg"
-            alt="ISSEGURE Logo"
-            className="h-32 w-auto bg-primary p-4 rounded-xl shadow-lg mb-6 transform hover:scale-105 transition-all duration-300"
+            src="/images/ISSEGUREX.png"
+            alt="ISSEGUREX Logo"
+            className="h-40 w-auto max-w-sm object-contain rounded-xl shadow-lg mb-6 transform hover:scale-105 transition-all duration-300"
           />
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           DALE MAYOR NIVEL A TU CERTIFICACIÓN
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl">
-          SOMOS LA INSTITUCIÓN TÉCNICO EDUCATIVA ESPECIALIZADA EN SEGURIDAD INTEGRAL
+          SOMOS EL CENTRO ESPECIALIZADA EN SEGURIDAD INTEGRAL
         </p>
         <p className="text-lg md:text-xl mb-8">
-          CERTIFÍCATE CON LOS EXPERTOS DE ISSEGURE / MÁS DE 20 AÑOS DE EXPERIENCIA
+          CERTIFÍCATE CON LOS EXPERTOS DE ISSEGUREX / CONTAMOS CON AÑOS DE EXPERIENCIA EN EL MERCADO
         </p>
         <div className="flex flex-col md:flex-row gap-4">
           <Link 

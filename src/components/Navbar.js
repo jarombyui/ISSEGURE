@@ -23,9 +23,9 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img
-                src="/images/logo.svg"
-                alt="ISSEGURE Logo"
-                className="h-12 w-auto bg-primary p-2 rounded-lg"
+                src="/images/ISSEGUREX.png"
+                alt="ISSEGUREX Logo"
+                className="h-16 w-auto max-w-[200px] object-contain drop-shadow-lg rounded"
               />
             </Link>
           </div>

@@ -4,35 +4,57 @@ const Courses = () => {
   const courses = [
     {
       id: 1,
-      title: 'Seguridad Privada',
-      description: 'Formación integral en seguridad privada con enfoque en prevención y protección.',
-      duration: '3 meses',
+      title: 'Riesgo Eléctrico',
+      description: 'Identificación, evaluación y control de riesgos eléctricos en el entorno laboral.',
+      duration: '1 mes',
       level: 'Básico',
-      image: '/images/security.jpg',
-      price: 'S/ 1,200',
-      schedule: 'Lunes a Viernes',
-      time: '6:00 PM - 9:00 PM'
+      image: '/images/RIESGO-electrico.jpg',
+      price: 'S/ 110 + IGV',
+      schedule: 'Día negociable',
+      time: '7:00 PM - 9:00 PM'
     },
     {
       id: 2,
-      title: 'Ciberseguridad',
-      description: 'Protección de sistemas informáticos y datos contra amenazas digitales.',
-      duration: '4 meses',
+      title: 'Bloqueo y Etiquetado',
+      description: 'Procedimientos seguros para el control de energías peligrosas (LOTO).',
+      duration: '1 mes',
       level: 'Intermedio',
-      image: '/images/cybersecurity.jpg',
-      price: 'S/ 1,500',
-      schedule: 'Martes y Jueves',
-      time: '7:00 PM - 10:00 PM'
+      image: '/images/LOTO.jpg',
+      price: 'S/ 110 + IGV',
+      schedule: 'Día negociable',
+      time: '7:00 PM - 9:00 PM'
     },
     {
       id: 3,
-      title: 'Primeros Auxilios',
-      description: 'Capacitación en atención de emergencias y primeros auxilios.',
-      duration: '2 meses',
+      title: 'Trabajos en Altura',
+      description: 'Capacitación en prevención de riesgos y técnicas seguras para trabajos en altura.',
+      duration: '1 mes',
       level: 'Básico',
-      image: '/images/first-aid.jpg',
-      price: 'S/ 800',
-      schedule: 'Sábados',
+      image: '/images/trabajos-altura.jpg',
+      price: 'S/ 110 + IGV',
+      schedule: 'Día negociable',
+      time: '6:00 PM - 10:00 PM'
+    },
+    {
+      id: 4,
+      title: 'Trabajos en Caliente',
+      description: 'Gestión de riesgos y procedimientos seguros para trabajos con fuentes de calor.',
+      duration: '1 mes',
+      level: 'Intermedio',
+      image: '/images/trabajos-caliente.png',
+      price: 'S/ 110 + IGV',
+      schedule: 'Día negociable',
+      time: '9:00 AM - 1:00 PM'
+    },
+    {
+      id: 5,
+      title: 'Trabajos en Espacios Confinados',
+      description: 'Prevención de riesgos y procedimientos seguros para trabajos en espacios confinados.',
+      duration: '1 mes',
+      level: 'Intermedio',
+      image: '/images/espacio-confinado.jpg',
+      price: 'S/ 110 + IGV',
+      schedule: 'Día negociable',
       time: '9:00 AM - 1:00 PM'
     }
   ];
@@ -53,10 +75,12 @@ const Courses = () => {
           {courses.map((course) => (
             <div key={course.id} className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
               <div className="relative h-48 bg-gray-200">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-4xl text-gray-400">📚</span>
-                </div>
+                <img
+                  src={course.image}
+                  alt={course.title}
+                  className="absolute inset-0 w-full h-full object-cover object-center rounded-xl shadow-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl"></div>
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -87,8 +111,15 @@ const Courses = () => {
                     <span>{course.time}</span>
                   </div>
                 </div>
-                <button className="w-full bg-primary text-white py-3 px-4 rounded-lg hover:bg-primary-dark transition-colors duration-300 font-semibold shadow-md hover:shadow-lg">
-                  Inscribirse Ahora
+                <button
+                  className="w-full bg-primary text-white py-3 px-4 rounded-lg hover:bg-primary-dark transition-colors duration-300 font-semibold shadow-md hover:shadow-lg"
+                  onClick={() => {
+                    const phone = '51987654321'; // Reemplaza con el número de WhatsApp de contacto
+                    const message = `Hola, quiero cotizar el curso: ${course.title}`;
+                    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+                  }}
+                >
+                  Cotiza Ahora
                 </button>
               </div>
             </div>
