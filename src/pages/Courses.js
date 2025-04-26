@@ -114,7 +114,7 @@ const Courses = () => {
                 <button
                   className="w-full bg-primary text-white py-3 px-4 rounded-lg hover:bg-primary-dark transition-colors duration-300 font-semibold shadow-md hover:shadow-lg"
                   onClick={() => {
-                    const phone = '51987654321'; // Reemplaza con el número de WhatsApp de contacto
+                    const phone = '51947726382'; // Reemplaza con el número de WhatsApp de contacto
                     const message = `Hola, quiero cotizar el curso: ${course.title}`;
                     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
                   }}

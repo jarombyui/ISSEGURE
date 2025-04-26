@@ -17,7 +17,7 @@ const Hero = () => {
           DALE MAYOR NIVEL A TU CERTIFICACIÓN
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl">
-          SOMOS EL CENTRO ESPECIALIZADA EN SEGURIDAD INTEGRAL
+          SOMOS EL CENTRO ESPECIALIZADO EN SEGURIDAD INTEGRAL
         </p>
         <p className="text-lg md:text-xl mb-8">
           CERTIFÍCATE CON LOS EXPERTOS DE ISSEGUREX / CONTAMOS CON AÑOS DE EXPERIENCIA EN EL MERCADO
