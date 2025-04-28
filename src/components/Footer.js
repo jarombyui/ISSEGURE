@@ -32,7 +32,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-4">
-              Centro para la Seguridad Industrial, brindando capacitaciones especializadas en seguridad integral por más de 20 años.
+              Centro para la Seguridad Industrial, brindando capacitaciones especializadas en seguridad integral por más de 10 años.
             </p>
           </div>
 
