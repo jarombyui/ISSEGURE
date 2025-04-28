@@ -1,4 +1,4 @@
-# ISSEGURE - Instituto Superior de Seguridad
+# ISSEGURE - Centro de la Seguridad Industrial
 
 Sitio web oficial de ISSEGURE, especialistas en educación y certificación en seguridad integral.
 
