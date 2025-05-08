@@ -104,7 +104,7 @@ const Blog = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Blog ISSEGUREX
+            Blog ISSECUREX
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
             Noticias recientes y casos reales: la importancia de la Seguridad y Salud en el Trabajo (SST) en minería y grandes empresas.

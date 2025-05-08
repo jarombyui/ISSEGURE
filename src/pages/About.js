@@ -9,7 +9,7 @@ const About = () => {
             ¿Quiénes Somos?
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            ISSEGUREX es el Centro Superior de Seguridad líder en educación y certificación en seguridad integral.
+            ISSECUREX es el Centro Superior de Seguridad líder en educación y certificación en seguridad integral.
           </p>
         </div>
 

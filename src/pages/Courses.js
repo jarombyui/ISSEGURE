@@ -6,56 +6,56 @@ const Courses = () => {
       id: 1,
       title: 'Riesgo Eléctrico',
       description: 'Identificación, evaluación y control de riesgos eléctricos en el entorno laboral.',
-      duration: '1 mes',
+      duration: '8-12 horas',
       level: 'Básico',
       image: '/images/RIESGO-electrico.jpg',
       price: 'S/ 110 + IGV',
       schedule: 'Día negociable',
-      time: '7:00 PM - 9:00 PM'
+      time: '9:00 AM - 6:00 PM'
     },
     {
       id: 2,
       title: 'Bloqueo y Etiquetado',
       description: 'Procedimientos seguros para el control de energías peligrosas (LOTO).',
-      duration: '1 mes',
+      duration: '8-12 horas',
       level: 'Intermedio',
       image: '/images/LOTO.jpg',
       price: 'S/ 110 + IGV',
       schedule: 'Día negociable',
-      time: '7:00 PM - 9:00 PM'
+      time: '9:00 AM - 6:00 PM'
     },
     {
       id: 3,
       title: 'Trabajos en Altura',
       description: 'Capacitación en prevención de riesgos y técnicas seguras para trabajos en altura.',
-      duration: '1 mes',
+      duration: '8-12 horas',
       level: 'Básico',
       image: '/images/trabajos-altura.jpg',
       price: 'S/ 110 + IGV',
       schedule: 'Día negociable',
-      time: '6:00 PM - 10:00 PM'
+      time: '9:00 AM - 6:00 PM'
     },
     {
       id: 4,
       title: 'Trabajos en Caliente',
       description: 'Gestión de riesgos y procedimientos seguros para trabajos con fuentes de calor.',
-      duration: '1 mes',
+      duration: '8-12 horas',
       level: 'Intermedio',
       image: '/images/trabajos-caliente.png',
       price: 'S/ 110 + IGV',
       schedule: 'Día negociable',
-      time: '9:00 AM - 1:00 PM'
+      time: '9:00 AM - 6:00 PM'
     },
     {
       id: 5,
       title: 'Trabajos en Espacios Confinados',
       description: 'Prevención de riesgos y procedimientos seguros para trabajos en espacios confinados.',
-      duration: '1 mes',
+      duration: '8-12 horas',
       level: 'Intermedio',
       image: '/images/espacio-confinado.jpg',
       price: 'S/ 110 + IGV',
       schedule: 'Día negociable',
-      time: '9:00 AM - 1:00 PM'
+      time: '9:00 AM - 6:00 PM'
     }
   ];
 
