@@ -60,7 +60,7 @@ const Contact = () => {
                   <div className="text-yellow-400 text-2xl">📍</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Dirección</h3>
-                    <p className="text-white/90">Av. Principal 123, Lima, Perú</p>
+                    <p className="text-white/90">Urb. Virgen del Carmen, Calle Gardenias N° 13, Ate - Lima.</p>
                   </div>
                 </div>
 
@@ -76,7 +76,7 @@ const Contact = () => {
                   <div className="text-yellow-400 text-2xl">✉️</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                    <p className="text-white/90">info@1ssecurex.com</p>
+                    <p className="text-white/90">issegureinstitute@gmail.com</p>
                   </div>
                 </div>
 

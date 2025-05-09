@@ -143,7 +143,7 @@ const ServicesPage = () => {
             Contáctanos para discutir tus necesidades específicas y encontrar la mejor solución para tu empresa
           </p>
           <button
-            className="bg-gradient-to-r from-primary via-indigo-700 to-purple-700 text-white font-bold py-3 px-8 rounded-lg hover:from-indigo-800 hover:to-primary transition-all duration-300"
+            className="bg-primary hover:bg-primary/80 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300"
             onClick={() => {
               const phone = '51947726382';
               const message = 'Hola, estoy interesado en los servicios de ISSEGUREX.';

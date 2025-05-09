@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-primary/80 hover:bg-primary/10 px-3 py-2 text-sm font-semibold rounded transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary"
+              className="text-gray-700 hover:text-primary/80"
               aria-label="Toggle menu"
             >
               <svg
@@ -83,7 +83,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block text-gray-700 hover:text-primary px-3 py-2 text-base font-medium transition-colors duration-200"
+                  className="block text-gray-700 hover:text-primary/80 hover:bg-primary/10 px-3 py-2 text-base font-semibold rounded transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
