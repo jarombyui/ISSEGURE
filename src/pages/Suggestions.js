@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-const Contact = () => {
+const Suggestions = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    message: ''
+    suggestion: ''
   });
 
   const [loading, setLoading] = useState(false);
@@ -28,9 +27,9 @@ const Contact = () => {
       // Simular envío de formulario
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSuccess(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', suggestion: '' });
     } catch (err) {
-      setError('Hubo un error al enviar el mensaje. Por favor, intente nuevamente.');
+      setError('Hubo un error al enviar tu sugerencia. Por favor, intente nuevamente.');
     } finally {
       setLoading(false);
     }
@@ -42,61 +41,53 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-              Contáctanos
+              Buzón de Sugerencias
             </h1>
             <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Estamos aquí para ayudarte. Envíanos tus consultas y te responderemos a la brevedad.
+              Tu opinión es importante para nosotros. Ayúdanos a mejorar nuestros servicios.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Information */}
+            {/* Information Section */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-8">Información de Contacto</h2>
+              <h2 className="text-3xl font-bold text-white mb-8">¿Por qué tus sugerencias son importantes?</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">📍</div>
+                  <div className="text-yellow-400 text-2xl">💡</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Dirección</h3>
-                    <p className="text-white/90">Av. Principal 123, Lima, Perú</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Mejora Continua</h3>
+                    <p className="text-white/90">Tus ideas nos ayudan a mejorar nuestros servicios y procesos</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">📞</div>
+                  <div className="text-yellow-400 text-2xl">🎯</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Teléfono</h3>
-                    <p className="text-white/90">+51 947 726 382</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Innovación</h3>
+                    <p className="text-white/90">Tus sugerencias nos permiten innovar y adaptarnos a las necesidades del mercado</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">✉️</div>
+                  <div className="text-yellow-400 text-2xl">🤝</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                    <p className="text-white/90">info@1ssecurex.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">⏰</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Horario de Atención</h3>
-                    <p className="text-white/90">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Compromiso</h3>
+                    <p className="text-white/90">Valoramos tu participación en nuestro crecimiento y desarrollo</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Suggestion Form */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-8">Envíanos un Mensaje</h2>
+              <h2 className="text-3xl font-bold text-white mb-8">Envíanos tu Sugerencia</h2>
               
               {success ? (
                 <div className="bg-green-500/20 text-green-200 p-4 rounded-xl mb-6">
-                  ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                  ¡Gracias por tu sugerencia! La revisaremos y te contactaremos si es necesario.
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -135,38 +126,25 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-white mb-2">Teléfono</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                      placeholder="Ingresa tu teléfono"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-white mb-2">Mensaje</label>
+                    <label htmlFor="suggestion" className="block text-white mb-2">Tu Sugerencia</label>
                     <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
+                      id="suggestion"
+                      name="suggestion"
+                      value={formData.suggestion}
                       onChange={handleChange}
                       required
-                      rows="4"
+                      rows="6"
                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                      placeholder="Escribe tu mensaje"
+                      placeholder="Escribe tu sugerencia aquí..."
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-primary via-indigo-700 to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-indigo-800 hover:to-primary transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {loading ? 'Enviando...' : 'Enviar Mensaje'}
+                    {loading ? 'Enviando...' : 'Enviar Sugerencia'}
                   </button>
                 </form>
               )}
@@ -178,4 +156,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Suggestions; 

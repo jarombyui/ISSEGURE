@@ -2,52 +2,59 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            ¿Quiénes Somos?
-          </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            ISSECUREX es el Centro Superior de Seguridad líder en educación y certificación en seguridad integral.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Nuestra Misión</h3>
-            <p className="text-gray-600">
-              Formar profesionales altamente capacitados en el área de seguridad, brindando educación de calidad
-              y certificaciones reconocidas a nivel nacional e internacional.
+    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900">
+      {/* Hero Section */}
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+              ¿Quiénes Somos?
+            </h1>
+            <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Somos una empresa líder en formación y certificación en seguridad laboral, comprometida con la excelencia y la innovación.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Nuestra Visión</h3>
-            <p className="text-gray-600">
-              Ser el referente en educación y certificación en seguridad, contribuyendo al desarrollo
-              de profesionales que marquen la diferencia en el sector.
-            </p>
+          {/* Mission and Vision Cards */}
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:-translate-y-1 transition-all duration-300">
+              <h2 className="text-3xl font-bold text-white mb-6">Misión</h2>
+              <p className="text-white/90 text-lg">
+                Proporcionar formación de calidad en seguridad laboral, contribuyendo a la prevención de accidentes y la protección de vidas en el entorno laboral.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:-translate-y-1 transition-all duration-300">
+              <h2 className="text-3xl font-bold text-white mb-6">Visión</h2>
+              <p className="text-white/90 text-lg">
+                Ser reconocidos como la institución líder en formación y certificación en seguridad laboral a nivel nacional e internacional.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Nuestros Valores</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-primary text-4xl mb-2">✓</div>
-              <h4 className="font-semibold text-gray-900">Excelencia</h4>
-              <p className="text-gray-600">Buscamos la máxima calidad en todo lo que hacemos</p>
+          {/* Values Section */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold text-white sm:text-5xl mb-4">
+              Nuestros Valores
+            </h2>
+            <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:-translate-y-1 transition-all duration-300">
+              <div className="text-yellow-400 text-4xl mb-4">✓</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Excelencia</h3>
+              <p className="text-white/90">Buscamos la excelencia en cada aspecto de nuestra formación y servicios</p>
             </div>
-            <div className="text-center">
-              <div className="text-primary text-4xl mb-2">✓</div>
-              <h4 className="font-semibold text-gray-900">Integridad</h4>
-              <p className="text-gray-600">Actuamos con honestidad y transparencia</p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:-translate-y-1 transition-all duration-300">
+              <div className="text-yellow-400 text-4xl mb-4">✓</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Innovación</h3>
+              <p className="text-white/90">Implementamos las últimas tecnologías y metodologías en seguridad</p>
             </div>
-            <div className="text-center">
-              <div className="text-primary text-4xl mb-2">✓</div>
-              <h4 className="font-semibold text-gray-900">Innovación</h4>
-              <p className="text-gray-600">Nos adaptamos a los cambios y nuevas tecnologías</p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:-translate-y-1 transition-all duration-300">
+              <div className="text-yellow-400 text-4xl mb-4">✓</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Compromiso</h3>
+              <p className="text-white/90">Nos comprometemos con la seguridad y el bienestar de nuestros clientes</p>
             </div>
           </div>
         </div>

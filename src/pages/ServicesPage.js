@@ -75,13 +75,14 @@ const ServicesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             Nuestros Servicios
           </h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
             Ofrecemos soluciones integrales en seguridad y capacitación para empresas y profesionales
           </p>
         </div>
@@ -90,20 +91,20 @@ const ServicesPage = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:-translate-y-1 transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="text-4xl mb-4 text-center">
+              <div className="text-4xl mb-4 text-center text-yellow-400">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-white/90 text-center">
                 {service.description}
               </p>
               <div className="mt-6 text-center">
                 <button
-                  className="inline-flex items-center text-primary hover:text-primary-dark font-semibold transition-colors duration-300"
+                  className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold transition-colors duration-300"
                   onClick={() => handleOpenModal(index)}
                 >
                   Saber más
@@ -118,23 +119,23 @@ const ServicesPage = () => {
 
         {/* Modal */}
         {modalOpen && selectedService && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full relative animate-fade-in">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+            <div className="bg-gradient-to-br from-primary via-indigo-900 to-purple-900 rounded-xl shadow-2xl p-8 max-w-lg w-full relative animate-fade-in border border-white/20">
               <button
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-2xl font-bold"
+                className="absolute top-4 right-4 text-white hover:text-yellow-400 text-2xl font-bold"
                 onClick={handleCloseModal}
                 aria-label="Cerrar"
               >
                 &times;
               </button>
-              <h3 className="text-2xl font-bold mb-4 text-primary">{selectedService.title}</h3>
-              <p className="text-gray-700 text-lg">{selectedService.details}</p>
+              <h3 className="text-2xl font-bold mb-4 text-yellow-400">{selectedService.title}</h3>
+              <p className="text-white/90 text-lg">{selectedService.details}</p>
             </div>
           </div>
         )}
 
         {/* Call to Action Section */}
-        <div className="mt-16 bg-primary rounded-xl shadow-lg p-8 text-white text-center">
+        <div className="mt-16 bg-white/10 backdrop-blur-lg rounded-xl shadow-lg p-8 text-white text-center border border-white/20">
           <h3 className="text-2xl font-bold mb-4">
             ¿Necesitas un servicio personalizado?
           </h3>
@@ -142,9 +143,9 @@ const ServicesPage = () => {
             Contáctanos para discutir tus necesidades específicas y encontrar la mejor solución para tu empresa
           </p>
           <button
-            className="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            className="bg-gradient-to-r from-primary via-indigo-700 to-purple-700 text-white font-bold py-3 px-8 rounded-lg hover:from-indigo-800 hover:to-primary transition-all duration-300"
             onClick={() => {
-              const phone = '51947726382'; // Reemplaza con el número de WhatsApp de contacto
+              const phone = '51947726382';
               const message = 'Hola, estoy interesado en los servicios de ISSEGUREX.';
               window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
             }}
